@@ -61,13 +61,13 @@ app.post('/api/courses',(req,res)=>{
     res.send(course);
 });
 
-// app.get('/api/posts/:year/:month',(req,res)=>{
-//     res.send(req.params);
-// });
+app.get('/api/posts/:year/:month',(req,res)=>{
+    res.send(req.params);
+});
 
-// app.get('/api/posts/:year/:month',(req,res)=>{
-//     res.send(req.query);
-// });
+app.get('/api/posts/:year/:month',(req,res)=>{
+    res.send(req.query);
+});
 
 app.put('/api/courses/:id',(req,res)=>{
     const course = courses.find(c=>c.id===parseInt(req.params.id));
